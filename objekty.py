@@ -1,5 +1,6 @@
 
-import turtle as t
+import turtle 
+import objekty_gui
 
 pixel_to_cm = 37.8
 
@@ -16,9 +17,9 @@ class Ctverec:
 
     def draw(self):
         for ii in range (4):
-            t.forward(pixel_to_cm*self.strana_a)
-            t.left(90)
-        t.exitonclick()
+            turtle.forward(pixel_to_cm*self.strana_a)
+            turtle.left(90)
+        turtle.exitonclick()
 
 class Obdelnik:
     def __init__(self,strana_a, strana_b):
@@ -32,12 +33,13 @@ class Obdelnik:
         return self.strana_a*self.strana_b
 
     def draw(self):
+
         for ii in range (2):
-            t.forward(pixel_to_cm*self.strana_a)
-            t.left(90)
-            t.forward(pixel_to_cm*self.strana_b)
-            t.left(90)
-        t.exitonclick()
+            turtle.forward(pixel_to_cm*self.strana_a)
+            turtle.left(90)
+            turtle.forward(pixel_to_cm*self.strana_b)
+            turtle.left(90)
+        turtle.exitonclick()
 
 class Uhelnik:
     def __init__(self,strana_a,pocet_uhlu, polomer_vepsane=0):
@@ -53,9 +55,9 @@ class Uhelnik:
 
     def draw(self):
         for ii in range (self.pocet_uhlu):
-            t.forward(pixel_to_cm*self.strana_a)
-            t.left(180 - (180 * (1-2/self.pocet_uhlu)))
-        t.exitonclick()
+            turtle.forward(pixel_to_cm*self.strana_a)
+            turtle.left(180 - (180 * (1-2/self.pocet_uhlu)))
+        turtle.exitonclick()
 
 
 #mujuhel = Uhelnik(5,6)

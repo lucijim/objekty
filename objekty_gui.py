@@ -3,6 +3,7 @@ from tkinter import PhotoImage, ttk
 import turtle 
 import objekty
 
+
 class ObjektyGUI(tk.Frame):
     def __init__(self, parent):
         super().__init__()
@@ -12,7 +13,7 @@ class ObjektyGUI(tk.Frame):
         self.create_widgets()
   
 
-    def draw_object(volba):
+    def draw_object(self,volba):
             if volba == 'ctverec':
                 ctverec = objekty.Ctverec(5)
                 ctverec.draw()
@@ -59,13 +60,12 @@ class ObjektyGUI(tk.Frame):
         self.platno = tk.Canvas(self.parent, width=640,height=600,background='white')
         self.platno.grid(row=3,column=3)
         
-        s = turtle.TurtleScreen(self.platno)
-        t = turtle.RawTurtle(self.platno) 
+        #s = turtle.TurtleScreen(self.platno)
+        t=turtle.RawTurtle(self.platno)
 
         t.forward(100)
+        
 
-        
-        
     
 
 
